@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* Light Theme */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #107eeb;
+  --card-bg: #f9f9f9;
+  --border-color: #ddd;
+  --txt-p-color:black;
+  --txt-p-color1:black;
+  --txt-p-color2:black;
+  --txt-p-color3:black;
+  --txt-p-color4:black;
+  font-weight: 300;
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --text-color: #f1f5f9;
+  --card-bg: #1e293b;
+  --border-color: #334155;
+  --txt-p-color:grey;
+  --txt-p-color1:white;
+  --txt-p-color2:white;
+  --txt-p-color3:white;
+  --txt-p-color4:black;
+  font-weight: 300;
+}
+
+/* Global Body */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Apply gradient in dark theme using direct selector */
+[data-theme='dark'] body {
+  --bg-color: #071426ad;
+}
+
+/* Hero Background */
+.it {
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/000/681/085/small_2x/futuristic-mechanical-gears-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.ic:hover{
+  color:#83c9f8;
+}
+
+/* Text Shadow */
+.drop-shadow-glow {
+  text-shadow: 0 0 6px rgba(59, 130, 246, 0.7);
+}
+
+/* Glowing Button */
+.glow-button {
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.7),
+              0 0 20px rgba(59, 130, 246, 0.5);
+}
+/* Icon glow on light/dark */
+.glow-icon {
+  filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.6));
+  transition: transform 0.3s;
+}
+.glow-icon:hover {
+  transform: scale(1.1);
+}
+
+.drop-shadow-glow {
+  text-shadow: 0 0 6px rgba(59, 130, 246, 0.7);
+}
